@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1>Hello world!</h1>
+      <main className="min-h-screen"></main>
     </>
   );
 }
