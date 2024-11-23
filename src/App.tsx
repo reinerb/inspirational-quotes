@@ -58,9 +58,12 @@ function App() {
 
     if (!polaroidElement) return;
 
-    toBlob(polaroidElement).then((blob) => {
-      saveAs(blob, "polaroid.png");
-    });
+    toBlob(polaroidElement)
+      .then((blob) => {
+        if (!blob) throw new Error("No blob found");
+        saveAs(blob, "polaroid.png");
+      })
+      .catch((error) => console.error(error));
   };
 
   useEffect(() => {
