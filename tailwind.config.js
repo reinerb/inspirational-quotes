@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        caveat: ["Caveat", "sans-serif"],
+        pinyon: ["Pinyon Script", "cursive"],
+      },
+    },
   },
   plugins: [],
 };
